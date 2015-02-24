@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<title>Editing HTML - Smogon HTML Previewer</title>
+	<link rel="search" type="application/opensearchdescription+xml" title="Smogon" href="http://www.smogon.com/search.xml"/>
+	<link rel="stylesheet" type="text/css" href="http://www.smogon.com/media/global.css"/>
+	<link rel="stylesheet" type="text/css" href="http://www.smogon.com/media/page.css"/>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src="qscms.js"></script>
+	<link id="head-marker" rel="stylesheet" type="text/css" href="style.css"/>
+</head>
+<body>
+	<div id="header">
+		<div id="logo">
+			<a href="/">Smogon.com</a>
+		</div>
+		<div id="header_island">
+			<div id="about">
+				<a href="/about">About</a> | <a href="/bw/">Black/White</a> | <a href="/forums/">Forums</a>
+			</div>
+			<div id="search_help">
+				<a href="/search/help">Search Help</a> | <a href="/search/plugin">Get Plugin</a>
+			</div>
+			<div id="search">
+				<form action="/search/" method="post">
+					<div>
+						<input type="text" name="q"/>
+						<input type="submit" value="Search"/>
+					</div>
+				</form>
+			</div>
+		</div>
+		<div id="top_breadcrumbs">
+			You are previewing: <strong><span class="qscms-title">Smogon HTML Previewer</span></strong>
+		</div>
+		<div id="qscms-info">
+			<p><span style="font-weight: bold; color: #f00;">Please do not write your code in this tool!</span> Use a proper code editor instead. I like <a href="http://notepad-plus-plus.org/" target="_blank">Notepad++</a> and <a href="http://brackets.io/" target="_blank">Brackets</a>, which are both free for Windows! [If you have any suggestions for Mac users, let me know!]</p>
+			<p>This tool was created by <a href="http://www.smogon.com/forums/members/quarkz.206020/" target="_blank">Quarkz</a> using a modified script originally by <a href="http://www.smogon.com/forums/members/toast.30562/" target="_blank">Toast++</a></p>
+			<a href="how-to-use.html"><button type="button" id="how-to-use">How to use this tool</button></a> | <button type="button" id="preview">Preview</button> | <button type="button" id="prep">Prep for Sharing</button>
+		</div>
+	</div>
+	<div id="body">
+		<h1 class="qscms-title">Smogon HTML Previewer</h1>
+		<div class="qscms-page">
+			<textarea id="qscms-input" placeholder="To use this tool, copy and paste your finished SCMS code into theis box. Hit the 'Preview' button and this tool will preview your code. If you want to share your preview, hit the 'Prep for Sharing' button which will set up the document for sharing. When the 'Save to Drive' button appears, hit it, and save the file to your configured Google Drive folder. You can then get your shareable URL. Currently supported SCMS tags are: [title], [head], and [page]."></textarea>
+			<div id="qscms-content"></div>
+		</div>
+	</div>
+	<div id="footer">
+		All guides and strategy information are &copy; 2004-2012 Smogon.com and its <a href="/credits" title="Thanks, guys!">contributors</a>. Pok&eacute;mon is © 1995-2012 Nintendo.
+	</div>
+	
+	<script>
+		var activePreview = false;
+		$('#preview').click(function(){
+			if (!activePreview) {
+				previewHtml($('#qscms-input').val());
+			} else {
+				resetHtml();
+			}
+		});
+	</script>
+</body>
+</html>

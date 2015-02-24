@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<title>How to Use This Tool - Smogon HTML Previewer</title>
+	<link rel="search" type="application/opensearchdescription+xml" title="Smogon" href="http://www.smogon.com/search.xml"/>
+	<link rel="stylesheet" type="text/css" href="http://www.smogon.com/media/global.css"/>
+	<link rel="stylesheet" type="text/css" href="http://www.smogon.com/media/page.css"/>
+	<link id="head-marker" rel="stylesheet" type="text/css" href="style.css"/>
+</head>
+<body>
+	<div id="header">
+		<div id="logo">
+			<a href="/">Smogon.com</a>
+		</div>
+		<div id="header_island">
+			<div id="about">
+				<a href="/about">About</a> | <a href="/bw/">Black/White</a> | <a href="/forums/">Forums</a>
+			</div>
+			<div id="search_help">
+				<a href="/search/help">Search Help</a> | <a href="/search/plugin">Get Plugin</a>
+			</div>
+			<div id="search">
+				<form action="/search/" method="post">
+					<div>
+						<input type="text" name="q"/>
+						<input type="submit" value="Search"/>
+					</div>
+				</form>
+			</div>
+		</div>
+		<div id="top_breadcrumbs">
+			You are previewing: <strong><span class="qscms-title">How to use this tool</span></strong>
+		</div>
+		<div id="qscms-info">
+			<p>This tool was created by <a href="http://www.smogon.com/forums/members/quarkz.206020/" target="_blank">Quarkz</a> using a modified script originally by <a href="http://www.smogon.com/forums/members/toast.30562/" target="_blank">Toast++</a></p>
+		</div>
+	</div>
+	<div id="body">
+		<h1 class="qscms-title">How to Use This Tool</h1>
+		<div class="qscms-page">
+			<div id="qscms-content">
+				<p>For now, using this tool is really simple! All you need to do is copy and paste your finished code into the big text box and hit the 'Preview' button. Later on, there will hopefully be more features, one of which will probably require more use of this how to use page. Report any bugs and suggestions to me, please. I really want this tool to help everyone out.</p>
+			</div>
+		</div>
+	</div>
+	<div id="footer">
+		All guides and strategy information are &copy; 2004-2012 Smogon.com and its <a href="/credits" title="Thanks, guys!">contributors</a>. Pok&eacute;mon is © 1995-2012 Nintendo.
+	</div>
+	
+	<script>
+		var activePreview = false;
+		$('#preview').click(function(){
+			if (!activePreview) {
+				previewHtml($('#qscms-input').val());
+			} else {
+				resetHtml();
+			}
+		});
+	</script>
+</body>
+</html>

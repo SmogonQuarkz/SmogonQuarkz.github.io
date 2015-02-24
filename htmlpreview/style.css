@@ -1,0 +1,14 @@
+#body {
+	max-width: 1350px;
+	margin: 0 auto;
+}
+
+#qscms-input {
+	width: 100%;
+	resize: none;
+	height: 600px;
+}
+
+#qscms-info {
+	text-align: center;
+}
