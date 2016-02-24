@@ -1,2 +1,2 @@
-# SmogonQuarkz.github.io
-Smogon HTML Previewer
+# lucasjgurney.github.io
+Personal experiments and tidbits.
